@@ -1,9 +1,10 @@
 import "../src/input.css"
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="text-gray text-center">
-      Hello world
+    <div>
+      <Home />
     </div>
   );
 }
