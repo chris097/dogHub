@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return(
-        <div className="text-center mt-40"> 
+        <div className="text-center space-y-6 md:space-y-0 md:mt-40 mt-28"> 
             <div className="flex justify-center space-x-6">
                 <span>
                     <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ const Banner = () => {
                     </svg>
                 </span>
             </div>
-            <div className="text-8xl font-semibold mt-4.4">Dog Breeds</div>
+            <div className="md:text-8xl text-5xl font-semibold mt-4.4">Dog Breeds</div>
         </div>
     )
 };
