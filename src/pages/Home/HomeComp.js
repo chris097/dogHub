@@ -1,5 +1,4 @@
 import React from "react";
-import dogImg from "../../public/images/dog.png";
 import { useFetchApi } from "../../services/fetchApi";
 
 
