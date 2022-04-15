@@ -71,9 +71,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="flex space-x-6">
-                            <a href=""><BsTwitter /></a>
-                            <a href=""><BsGithub /></a>
-                            <a href=""><BsLinkedin /></a>
+                            <a href="https://twitter.com/chris_chiemela"><BsTwitter /></a>
+                            <a href="https://github.com/chris097"><BsGithub /></a>
+                            <a href="https://www.linkedin.com/in/christian-chiemela-b8881619a/"><BsLinkedin /></a>
                         </div>
                     </div>
                 </div>

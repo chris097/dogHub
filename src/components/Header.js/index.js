@@ -21,7 +21,7 @@ const Header = () => {
                             <path d="M23.9575 24.9165L24.6241 25.5619L25.2908 24.9178L24.6241 24.2723L23.9575 24.9165Z" fill="black"/>
                             </svg>
                         </span>
-                        <div className="text-2xl ml-1 font-medium">DogHub</div>
+                        <div className="text-2xl display-none ml-1 font-medium">DogHub</div>
                     </div>
                 <div className="bg-secondarygray text-sm py-2 px-3 rounded-full">January 15, 2022</div>
                 </div>
