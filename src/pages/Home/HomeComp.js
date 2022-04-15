@@ -33,8 +33,8 @@ const HomeComp = () => {
                 <h1 className="md:text-5xl text-3xl capitalize">{breedName}</h1>
                 <div className="mt-6 flex flex-wrap">
                     {isFetching ? <div className="text-center flex justify-center">Loading...</div> : isData?.message?.map(breedImg => (
-                        <div className="mt-8 mr-8">
-                            <img className="w-350px md:h-456px" src={breedImg} alt="dog_image" />
+                        <div className="mt-8 md:mr-8">
+                            <img className="w-full md:w-350px h-400px md:h-456px" src={breedImg} alt="dog_image" />
                         </div>
                     ))}
                 </div>
