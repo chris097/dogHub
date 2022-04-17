@@ -4,10 +4,25 @@ import { useFetchApi } from "../../services/fetchApi";
 
 const HomeComp = () => {
 
-    const [breedName, setBreedName] = useState("australian");
+    const [breedName, setBreedName] = useState("affenpinscher");
+    const [minNumber, setminNumber] = useState("");
 
     const { data } = useFetchApi("breeds/list");
-    const {data:isData, isFetching} = useFetchApi(`breed/${breedName}/images`)
+    const {data:isData, isFetching:isLoading} = useFetchApi(`breed/${breedName}/images`);
+    const {data:isRandom, isFetching} = useFetchApi(`breed/${breedName}/images/random/${minNumber}`)
+    console.log(isRandom?.message?.map(msg => msg));
+
+    let number = [];
+
+    for(let i =1; i<=10;i++)
+        number.push(i);
+
+
+    console.log(minNumber);
+
+    const handleNumber = (e) =>{
+        setminNumber(e.target.value)
+    }
 
     return(
         <div className="max-w-7xl md:mx-auto mx-10">
@@ -18,8 +33,10 @@ const HomeComp = () => {
                             <option>{breedList}</option>
                         ))}
                     </select>
-                    <select className="border border-black w-full md:w-40 py-3 px-1 outline-none">
-                        <option>Breed</option>
+                    <select onClick={handleNumber} className="border border-black w-full md:w-40 py-3 px-1 outline-none">
+                        {number.map(number=>(
+                            <option key={number} id={number} value={number}>{number}</option>
+                        ))}
                     </select>
                     <select className="border border-black w-full md:w-40 py-3 px-1 outline-none">
                         <option>Breed</option>
@@ -32,11 +49,17 @@ const HomeComp = () => {
             <div className="mt-14">
                 <h1 className="md:text-5xl text-3xl capitalize">{breedName}</h1>
                 <div className="mt-6 flex flex-wrap">
-                    {isFetching ? <div className="text-center flex justify-center">Loading...</div> : isData?.message?.map(breedImg => (
+                    {!minNumber ? (isLoading?"Loading...":
+                    isData?.message?.map(breedImg => (
+                        <div className="mt-8 md:mr-8">
+                            <img className="w-full md:w-350px h-400px md:h-456px" src={breedImg} alt="dog_image" />
+                        </div> 
+                    ))
+                    ):(isFetching ? <div className="text-center flex justify-center">Loading...</div> : isRandom?.message?.map((breedImg, index) => (
                         <div className="mt-8 md:mr-8">
                             <img className="w-full md:w-350px h-400px md:h-456px" src={breedImg} alt="dog_image" />
                         </div>
-                    ))}
+                    )))}
                 </div>
             </div>
         </div>
