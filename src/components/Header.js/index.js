@@ -4,7 +4,7 @@ const Header = () => {
     return(
         <div>
             <div className="h-16 border font-inter"> 
-                <div className="flex h-full justify-between max-w-7xl md:mx-auto mx-5 items-center">
+                <div className="flex h-full justify-between max-w-[90%] md:mx-auto mx-5 items-center">
                     <div className="flex items-center">
                         <span>
                             <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
