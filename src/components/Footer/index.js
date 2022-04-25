@@ -5,7 +5,7 @@ const Footer = () => {
     return(
         <div>
             <div className="mt-48 border-t">
-                <div className="max-w-7xl space-y-7 md:space-y-0 md:mx-auto mx-5 mt-24 md:flex justify-between flex-wrap">
+                <div className="max-w-[90%] space-y-7 md:space-y-0 md:mx-auto mx-5 mt-24 md:flex justify-between flex-wrap">
                     <div>
                         <div className="flex items-center">
                             <span>

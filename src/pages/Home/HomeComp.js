@@ -21,7 +21,7 @@ const HomeComp = () => {
 
     return(
         <div className="max-w-[90%] md:mx-auto mx-10">
-            <div className="md:flex md:justify-between space-y-6 items-center flex-wrap mt-24 md:mt-52">
+            <div className="md:flex md:justify-between space-y-6 md:space-y-0 items-center flex-wrap mt-24 md:mt-52">
                 <div className="md:flex space-y-6 md:space-y-0 md:space-x-6">
                     <select defaultValue={breedName} onChange={(e) => setBreedName(e.target.value)} className="border border-black w-full md:w-40 py-3 px-1 outline-none">
                         {data?.message?.map(breedList => (
